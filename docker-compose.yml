@@ -1,0 +1,8 @@
+nginx:
+  image: nginx:alpine
+  container_name: ele_nginx
+  volumes:
+   - ./var/nginx/conf:/etc/nginx:ro
+   - ./www:/usr/share/nginx/html
+  ports:
+   - "8002:80"
